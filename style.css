@@ -318,12 +318,30 @@ header {
 
 /* Responsividade para Telemóveis */
 @media (max-width: 768px) {
+    header {
+        position: relative; /* Deixa de ser fixo no telemóvel! Sobe junto com a página */
+    }
+
+    body {
+        padding-top: 0; /* Remove o espaçamento extra no telemóvel */
+    }
+
     .menu-toggle {
-        display: flex; /* Mostra o hambúrguer no telemóvel */
+        display: flex; /* Mostra o hambúrguer */
+        cursor: pointer;
+        flex-direction: column;
+        gap: 5px;
+    }
+
+    .menu-toggle .bar {
+        width: 25px;
+        height: 3px;
+        background-color: #d4af37;
+        transition: 0.3s;
     }
 
     .nav-menu {
-        display: none; /* Esconde o menu horizontal normal */
+        display: none; /* Esconde o menu horizontal */
         flex-direction: column;
         position: absolute;
         top: 100%;
@@ -336,9 +354,8 @@ header {
         box-shadow: 0 10px 10px rgba(0,0,0,0.5);
     }
 
-    /* Quando a classe 'active' for acionada pelo JavaScript, o menu aparece */
     .nav-menu.active {
-        display: flex;
+        display: flex; /* Abre o menu quando clica no hambúrguer */
     }
 
     .nav-menu a {
