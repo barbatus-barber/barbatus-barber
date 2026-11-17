@@ -17,6 +17,7 @@ body {
     color: var(--text-dark);
     background-color: var(--bg-light);
     line-height: 1.6;
+    padding-top: 90px; /* Espaço para o cabeçalho fixo no PC */
 }
 
 #servicos {
@@ -31,21 +32,24 @@ body {
     scroll-margin-top: 100px;
 }
 
-/* Espaço menor e perfeito para a secção de Agendamento */
 #agendamento {
     scroll-margin-top: 30px;
 }
 
-/* Header */
+/* ==========================================
+   Header & Logo (Unificado e Corrigido)
+   ========================================== */
 header {
-    background-color: var(--primary-color);
+    background-color: #111;
     color: var(--white);
-    padding: 1.5rem 2rem;
+    padding: 15px 30px;
     display: flex;
     justify-content: space-between;
     align-items: center;
-    position: sticky;
+    position: fixed;
     top: 0;
+    left: 0;
+    width: 100%;
     z-index: 1000;
     box-shadow: 0 2px 10px rgba(0,0,0,0.3);
 }
@@ -53,29 +57,53 @@ header {
 .logo {
     display: flex;
     align-items: center;
-    gap: 12px; /* Espaço ideal entre o logótipo e o texto */
+    gap: 15px;
     font-family: 'Playfair Display', serif;
     font-size: 1.8rem;
     color: var(--accent-color);
     letter-spacing: 1px;
 }
 
-.logo-img {
-    height: 58px; /* Ajusta a altura da imagem conforme necessário */
-    width: auto;
-    object-fit: contain;
+/* Tamanho controlado e perfeito para o Computador */
+.logo img, .logo-img {
+    width: 60px;
+    height: 60px;
+    max-width: 60px;
+    max-height: 60px;
+    border-radius: 50%;
+    object-fit: cover;
 }
 
-nav a {
+.nav-menu {
+    display: flex;
+    gap: 20px;
+    list-style: none;
+}
+
+.nav-menu a {
     color: var(--white);
     text-decoration: none;
-    margin-left: 1.5rem;
     font-weight: 500;
     transition: color 0.3s;
 }
 
-nav a:hover {
+.nav-menu a:hover {
     color: var(--accent-color);
+}
+
+/* Botão de hambúrguer oculto por defeito no PC */
+.menu-toggle {
+    display: none;
+    cursor: pointer;
+    flex-direction: column;
+    gap: 5px;
+}
+
+.menu-toggle .bar {
+    width: 25px;
+    height: 3px;
+    background-color: #d4af37;
+    transition: 0.3s;
 }
 
 /* Hero Section */
@@ -163,7 +191,6 @@ section h2 {
     display: block;
 }
 
-
 /* Estilo do Banner de Fidelidade */
 .loyalty-banner {
     background: linear-gradient(135deg, #1a1a1a, #2c2c2c);
@@ -198,7 +225,6 @@ section h2 {
     font-weight: bold;
     font-size: 0.9rem;
 }
-
 
 /* Seção de Agendamento */
 .booking-section {
@@ -262,86 +288,41 @@ footer p {
     font-size: 0.9rem;
 }
 
-@media (max-width: 768px) {
-    .hero h1 { font-size: 2.2rem; }
-    nav { display: none; }
-}
 
-
-
-
-/* Estilos base do Header */
-header {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    padding: 15px 30px;
-    background-color: #111;
-    position: fixed;
-    top: 0;
-    left: 0;
-    width: 100%;
-    z-index: 1000;
-    box-sizing: border-box;
-}
-
-.nav-menu {
-    display: flex;
-    gap: 20px;
-}
-
-.nav-menu a {
-    color: #fff;
-    text-decoration: none;
-    font-weight: 500;
-    transition: color 0.3s;
-}
-
-.nav-menu a:hover {
-    color: #d4af37;
-}
-
-/* Ocultar o botão de hambúrguer por defeito (computador) */
-.menu-toggle {
-    display: none;
-    cursor: pointer;
-    flex-direction: column;
-    gap: 5px;
-}
-
-.menu-toggle .bar {
-    width: 25px;
-    height: 3px;
-    background-color: #d4af37;
-    transition: 0.3s;
-}
-
-/* Responsividade para Telemóveis */
+/* ==========================================
+   Responsividade para Telemóveis (Max 768px)
+   ========================================== */
 @media (max-width: 768px) {
     header {
-        position: relative; /* Deixa de ser fixo no telemóvel! Sobe junto com a página */
+        position: relative; /* Deixa de ser fixo no telemóvel */
     }
 
     body {
         padding-top: 0; /* Remove o espaçamento extra no telemóvel */
     }
 
-    .menu-toggle {
-        display: flex; /* Mostra o hambúrguer */
-        cursor: pointer;
-        flex-direction: column;
-        gap: 5px;
+    .hero h1 { 
+        font-size: 2.2rem; 
     }
 
-    .menu-toggle .bar {
-        width: 25px;
-        height: 3px;
-        background-color: #d4af37;
-        transition: 0.3s;
+    /* Reduz o logótipo no telemóvel para não estourar */
+    .logo img, .logo-img {
+        width: 38px !important;
+        height: 38px !important;
+        max-width: 38px !important;
+        max-height: 38px !important;
+    }
+
+    .logo {
+        font-size: 1.4rem;
+    }
+
+    .menu-toggle {
+        display: flex; /* Mostra o hambúrguer no telemóvel */
     }
 
     .nav-menu {
-        display: none; /* Esconde o menu horizontal */
+        display: none; /* Esconde o menu horizontal no telemóvel */
         flex-direction: column;
         position: absolute;
         top: 100%;
@@ -355,7 +336,7 @@ header {
     }
 
     .nav-menu.active {
-        display: flex; /* Abre o menu quando clica no hambúrguer */
+        display: flex; /* Abre o menu ao clicar no hambúrguer */
     }
 
     .nav-menu a {
