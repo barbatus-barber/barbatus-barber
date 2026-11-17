@@ -1,0 +1,294 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Barbatus Barber | Barbearia em Campinas</title>
+    <!-- Google Fonts -->
+    <link
+        href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;700&family=Playfair+Display:wght@700&display=swap"
+        rel="stylesheet">
+
+    <!-- Ligação para o CSS externo -->
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+    <!-- Header -->
+    <header>
+        <div class="logo">
+            <img src="images/logo.png" alt="Barbatus Barber"> <!-- Ajusta o caminho do teu logo se necessário -->
+            <span>Barbatus Barber</span>
+        </div>
+
+        <!-- Botão do Menu Hambúrguer -->
+        <div class="menu-toggle" id="mobile-menu">
+            <span class="bar"></span>
+            <span class="bar"></span>
+            <span class="bar"></span>
+        </div>
+
+        <!-- Links de Navegação -->
+        <nav class="nav-menu">
+            <a href="#servicos">Serviços</a>
+            <a href="#agendamento">Agendar</a>
+            <a href="#fidelidade">Fidelidade</a>
+            <a href="#localizacao">Localização</a>
+            <a href="https://instagram.com" target="_blank">Instagram</a>
+        </nav>
+    </header>
+
+    <!-- Hero -->
+    <section class="hero">
+        <h1>O Seu Estilo em Boas Mãos</h1>
+        <p>Corte impecável, barba tradicional e um ambiente exclusivo em Campinas - SP.</p>
+        <a href="#agendamento" class="btn">Marcar Horário</a>
+    </section>
+
+    <!-- Serviços -->
+    <section id="servicos" class="container">
+        <h2>Nossos Serviços</h2>
+        <div class="services-grid">
+            <div class="service-card">
+                <h3>Corte Cabelo</h3>
+                <p>Corte moderno ou clássico, com acabamento em navalha e lavagem inclusa.</p>
+                <span class="price">R$ 45,00</span>
+            </div>
+            <div class="service-card">
+                <h3>Barba Completa</h3>
+                <p>Modelagem de barba com toalha quente, óleos hidratantes e navalha.</p>
+                <span class="price">R$ 45,00</span>
+            </div>
+            <div class="service-card">
+                <h3>Combo (Cabelo + Barba)</h3>
+                <p>O pacote completo para manter o visual sempre em dia com desconto especial.</p>
+                <span class="price">R$ 85,00</span>
+            </div>
+            <div class="service-card">
+                <h3>Pezinho</h3>
+                <p>Acabamento perfeito de pé e pescoço com navalha para manter o corte em dia.</p>
+                <span class="price">R$ 15,00</span>
+            </div>
+            <div class="service-card">
+                <h3>Sobrancelha</h3>
+                <p>Design e alinhamento de sobrancelhas com navalha ou pinça, valorizando o rosto.</p>
+                <span class="price">R$ 20,00</span>
+            </div>
+            <div class="service-card">
+                <h3>Cabelo + Sobrancelha</h3>
+                <p>Corte completo com acabamento e alinhamento de sobrancelhas.</p>
+                <span class="price">R$ 60,00</span>
+            </div>
+            <div class="service-card">
+                <h3>Barba + Pezinho</h3>
+                <p>Modelagem completa da barba com o alinhamento do contorno do cabelo.</p>
+                <span class="price">R$ 20,00</span>
+            </div>
+            <div class="service-card">
+                <h3>Limpeza de pele</h3>
+                <p>Remoção de cravos e impurezas, revitalizando a pele e controlando a oleosidade.</p>
+                <span class="price">R$ 40,00</span>
+            </div>
+            <div class="service-card">
+                <h3>Combo (Cabelo + Barba + Sobrancelha)</h3>
+                <p>O pacote completo para um cuidado total com o visual, incluindo corte, barba e sobrancelha.</p>
+                <span class="price">R$ 100,00</span>
+            </div>
+        </div>
+    </section>
+
+
+    <!-- Secção do Programa de Fidelidade -->
+    <section id="fidelidade" class="container" style="padding-top: 0; padding-bottom: 20px;">
+        <div class="loyalty-banner">
+            <h3>✂️ Programa de Fidelidade Barbatus</h3>
+            <p>Valorizamos a sua preferência! A cada <strong>9 cortes de cabelo</strong> realizados na nossa barbearia,
+                o <strong>10.º corte é totalmente gratuito</strong>.</p>
+            <span class="loyalty-highlight">Guarde o seu cartão de cliente e aproveite o seu benefício a cada 10
+                cortes!</span>
+        </div>
+    </section>
+
+    <!-- Secção de Localização -->
+    <section id="localizacao" class="container" style="padding: 40px 20px; text-align: center;">
+        <div class="loyalty-banner"
+            style="background-color: #1a1a1a; color: #fff; padding: 30px; border-radius: 8px; border: 1px solid #d4af37;">
+            <h3 style="color: #d4af37; margin-bottom: 15px;">📍 Onde Estamos</h3>
+            <p style="font-size: 18px; margin-bottom: 20px;">
+                <strong>Avenida Adão Focesi, 259</strong><br>
+                Jardim do Lago — Campinas / SP
+            </p>
+            <a href="https://maps.google.com/?q=Avenida+Adão+Focesi+259+Campinas" target="_blank"
+                style="background-color: #25d366; color: white; padding: 10px 20px; text-decoration: none; border-radius: 5px; font-weight: bold; display: inline-block;">
+                🗺️ Abrir no Google Maps
+            </a>
+        </div>
+    </section>
+
+    <!-- Agendamento -->
+    <section id="agendamento" class="container">
+        <h2>Agende Seu Horário</h2>
+        <div class="booking-section">
+            <form id="bookingForm">
+                <div class="form-group">
+                    <label for="name">Seu Nome:</label>
+                    <input type="text" id="name" required placeholder="Digite seu nome completo">
+                </div>
+
+                <div class="form-group">
+                    <label for="service">Escolha o Serviço:</label>
+                    <select id="service" required>
+                        <option value="">Selecione...</option>
+                        <option value="Corte Cabelo - R$ 50,00">Corte Cabelo (R$ 50,00)</option>
+                        <option value="Barba Completa - R$ 45,00">Barba Completa (R$ 45,00)</option>
+                        <option value="Combo (Cabelo + Barba) - R$ 85,00">Combo Cabelo + Barba (R$ 85,00)</option>
+                        <option value="Pezinho - R$ 15,00">Pezinho (R$ 15,00)</option>
+                        <option value="Sobrancelha - R$ 20,00">Sobrancelha (R$ 20,00)</option>
+                        <option value="Limpeza de pele - R$ 40,00">Limpeza de pele (R$ 40,00)</option>
+                        <option value="Cabelo + Sobrancelha - R$ 60,00">Cabelo + Sobrancelha (R$ 60,00)</option>
+                        <option value="Barba + Pezinho - R$ 20,00">Barba + Pezinho (R$ 20,00)</option>
+                        <option value="Combo Completo (Cabelo + Barba + Sobrancelha) - R$ 100,00">Combo Completo (Cabelo
+                            + Barba + Sobrancelha - R$ 100,00)</option>
+                    </select>
+                </div>
+                <div class="form-group">
+                    <label for="date">Data Preferida:</label>
+                    <input type="date" id="date" required>
+                </div>
+                <div class="form-group">
+                    <label for="time">Horário Disponível:</label>
+                    <select id="time" required>
+                        <option value="">Selecione um horário...</option>
+                        <option value="09:00">09:00</option>
+                        <option value="09:30">09:30</option>
+                        <option value="10:00">10:00</option>
+                        <option value="10:30">10:30</option>
+                        <option value="11:00">11:00</option>
+                        <option value="11:30">11:30</option>
+                        <option value="12:00">12:00</option>
+                        <option value="12:30">12:30</option>
+                        <option value="13:00">13:00</option>
+                        <option value="13:30">13:30</option>
+                        <option value="14:00">14:00</option>
+                        <option value="14:30">14:30</option>
+                        <option value="15:00">15:00</option>
+                        <option value="15:30">15:30</option>
+                        <option value="16:00">16:00</option>
+                        <option value="16:30">16:30</option>
+                        <option value="17:00">17:00</option>
+                        <option value="17:30">17:30</option>
+                        <option value="18:00">18:00</option>
+                        <option value="18:30">18:30</option>
+                    </select>
+                </div>
+                <button type="submit" class="btn" style="width: 100%;">Confirmar Agendamento via WhatsApp</button>
+            </form>
+    </section>
+
+    <!-- Botão Flutuante WhatsApp -->
+    <a href="https://wa.me/5519989261078?text=Olá!%20Gostaria%20de%20sugerir%20um%20horário%20na%20Barbatus%20Barber."
+        class="whatsapp-float" target="_blank">
+        💬 Fale Conosco
+    </a>
+
+    <!-- Rodapé -->
+    <footer>
+        <p>&copy; 2026 Barbatus Barber - Campinas/SP. Todos os direitos reservados.</p>
+        <p><a href="https://www.instagram.com/barbatus.barber/" target="_blank"
+                style="color: var(--accent-color); text-decoration: none;">Siga no Instagram: @barbatus.barber</a></p>
+    </footer>
+
+    <!-- Script JavaScript -->
+    <script>
+        // === 1. SCRIPT DO MENU HAMBÚRGUER (PARA TELEMÓVEL) ===
+        const mobileMenu = document.getElementById('mobile-menu');
+        const navMenu = document.querySelector('.nav-menu');
+
+        mobileMenu.addEventListener('click', () => {
+            navMenu.classList.toggle('active');
+        });
+
+        // Fecha o menu automaticamente quando o utilizador clica em qualquer opção
+        document.querySelectorAll('.nav-menu a').forEach(link => {
+            link.addEventListener('click', () => {
+                navMenu.classList.remove('active');
+            });
+        });
+
+
+        // === 2. SCRIPT DE AGENDAMENTO (WHATSAPP E VALIDAÇÕES) ===
+        const allTimeSlots = [
+            "09:00", "09:30", "10:00", "10:30", "11:00", "11:30",
+            "12:00", "12:30", "13:00", "13:30", "14:00", "14:30",
+            "15:00", "15:30", "16:00", "16:30", "17:00", "17:30",
+            "18:00", "18:30"
+        ];
+
+        document.getElementById('bookingForm').addEventListener('submit', function (e) {
+            e.preventDefault();
+
+            const name = document.getElementById('name').value;
+            const serviceSelect = document.getElementById('service');
+            const serviceText = serviceSelect.options[serviceSelect.selectedIndex].text;
+            const dateStr = document.getElementById('date').value;
+            const time = document.getElementById('time').value;
+
+            if (!dateStr || !time) {
+                alert('⚠️ Por favor, selecione a data e o horário.');
+                return;
+            }
+
+            // Validar se é Domingo (0 = Domingo)
+            const selectedDate = new Date(dateStr + 'T00:00:00');
+            if (selectedDate.getDay() === 0) {
+                alert('❌ A Barbatus Barber não abre aos domingos. Por favor, escolha de segunda a sábado.');
+                return;
+            }
+
+            // Definir duração do serviço
+            const isCombo = serviceText.toLowerCase().includes('combo') ||
+                serviceText.toLowerCase().includes('cabelo + sobrancelha');
+            const slotsNeeded = isCombo ? 2 : 1;
+
+            const startIndex = allTimeSlots.indexOf(time);
+            if (startIndex === -1) {
+                alert('⚠️ Horário inválido.');
+                return;
+            }
+
+            if (startIndex + slotsNeeded > allTimeSlots.length) {
+                alert('⚠️ Este serviço excede o horário de funcionamento da barbearia (Encerra às 19:00).');
+                return;
+            }
+
+            let slotsToBook = [];
+            for (let i = 0; i < slotsNeeded; i++) {
+                slotsToBook.push(`${dateStr}_${allTimeSlots[startIndex + i]}`);
+            }
+
+            // Verificar conflito de horários duplicados
+            let bookedSlots = JSON.parse(localStorage.getItem('barbatus_booked_slots')) || [];
+            if (slotsToBook.some(slot => bookedSlots.includes(slot))) {
+                alert('⚠️ Atenção: Um ou mais horários neste intervalo já estão ocupados! Escolha outro horário.');
+                return;
+            }
+
+            // Salvar os slots ocupados no localStorage
+            bookedSlots.push(...slotsToBook);
+            localStorage.setItem('barbatus_booked_slots', JSON.stringify(bookedSlots));
+
+            // Enviar para o WhatsApp
+            const phoneBarber = "5519999999999"; // Substitui pelo WhatsApp real da barbearia
+            const message = `Olá, meu nome é *${name}*. Gostaria de agendar: *${serviceText}* para o dia *${dateStr}* às *${time}*.`;
+            const encodedMessage = encodeURIComponent(message);
+
+            window.open(`https://wa.me/${phoneBarber}?text=${encodedMessage}`, '_blank');
+
+            this.reset();
+            alert('✅ Agendamento realizado com sucesso! Redirecionando para o WhatsApp...');
+        });
+    </script>
+
+</html>
